@@ -15,6 +15,8 @@ RUN ln -sf /dev/stderr /var/log/nginx/error.log
 
 VOLUME ["/var/cache/nginx"]
 
+RUN npm install -g mocha gulp forever
+
 EXPOSE 80 443
 
 CMD ["nginx", "-g", "daemon off;"]
